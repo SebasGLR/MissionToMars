@@ -3,56 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Home pagina</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Mission To Mars</h1>
-
-    <div class="dropdown">
-        <a href="#"><img src="images/nav.png" alt=""></a>
-        <div class="dropdown-menu">
-            <a href="wellenfitness.html">Well en Fitness/Bibliotheek</a>
-            <a href="holodeck.html">Holodeck</a>
-          
-    
-        </div>
+  <div class="homepagina-container">
+    <div class="header">
+      <div class="menu-icon">
+        <label for="check">
+          <input class="burger-menu-input" type="checkbox" id="check"/> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <div class="logo">
+          <!-- <img src="images/header/logo.png" alt="logo"> -->
+            MMS
+      </div>
     </div>
-
-
-    <a href="pages/bibliotheek.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Bibliotheek</button>
-    </a>
-    <a href="pages/entertainment.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">entertainment</button>
-    </a>
-    <a href="pages/filmsenseries.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Film en Series</button>
-    </a>
-    <a href="pages/fitnessruimte.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Fitness</button>
-    </a>
-    <a href="pages/informatie.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Informatie</button>
-    </a>
-
-    <a href="pages/minigames.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Minigames</button>
-    </a>
-    <a href="pages/muziekebooks.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Muziek Books</button>
-    </a>
-    <a href="pages/restaurant.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Restaurant</button>
-    </a>
-    <a href="pages/ruimteschip.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Ruimteschip</button>
-    </a>
-    <a href="pages/vrholodeck.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">VR Holodeck</button>
-    </a>
-    <a href="pages/wellness.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Wellness</button>
-    </a>
+      <div class="landing">
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Homepagina</a></li>
+            <li><a href="vlucht-info.html">Over de vlucht</a></li>
+            <li><a href="ruimteschip.html">Ruimteschip</a></li>
+            <li><a href="rest-menu.html">Restaurant menu</a></li>
+            <!-- <li><a href="">Wellnessruimte</a></li> -->
+            <li><a href="">Wellnessruimte</a><div class="arrow-div"><i class="arrow up"></i></div></li>
+            <li class="sub"><a href="">- Fitnessruimte en lessen</a></li>
+            <li class="sub"><a href="">- Bibliotheek</a></li>
+            <li><a href="">Vr-Holodeck</a></li>
+            <!-- <li><a href="">Entertainment</a></li> -->
+            <li><a href="">Entertainment</a><div class="arrow-div"><i class="arrow up"></i></div></li>
+            <li class="sub"><a href="">- Mini games</a></li>
+            <li class="sub"><a href="">- Films & Series</a></li>
+            <li class="sub"><a href="books-music.html">- E-books & Muziek</a></li>
+          </ul>
+        </div>
+        <h1 class="homepagina-title hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente eum</h1>
+        <p class="homepagina-description hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsam odit repellat consectetur</p>
+      </div>
+  </div>
+      <script src="script.js"></script>
 </body>
 </html>
