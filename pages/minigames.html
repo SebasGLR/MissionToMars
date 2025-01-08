@@ -3,45 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minigames</title>
-    <link rel="stylesheet" href="../css/minigames.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ruimteschip</title>
 </head>
 <body>
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <div class="menu" id="menu">
-            <div class="close-icon" onclick="toggleMenu()">✖</div>
-            <a href="#">Home</a>
-            <a href="#">Game 1</a>
-            <a href="#">Game 2</a>
-            <a href="#">Contact</a>
-        </div>
-        <h1 style="text-align: center;">Minigames</h1>
-    </nav>
-    <div class="container">
-        <div class="games">
-            <button class="game-btn">Game 1</button>
-            <button class="game-btn">Game 2</button>
-        </div>
-        <div class="description">
-            <h2>Text + Uitleg</h2>
-            <p>--- ------ ---- --- ---<br>-- -- - -   - - ------</p>
+  <div class="ruimteschip-container">
+    <div class="header">
+      <div class="menu-icon">
+        <label for="check">
+          <input class="burger-menu-input" type="checkbox" id="check"/> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+        <div class="logo">
+            <!-- <img src="images/header/logo.png" alt="logo"> -->
+            Mission to Mars
         </div>
     </div>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            const menuIcon = document.getElementById('menuIcon');
-
-            if (menu.style.left === '0px') {
-                menu.style.left = '-250px';
-            } else {
-                menu.style.left = '0px';
-            }
-        }
-    </script>
-
-
+    <div class="ruimteschip-landing">
+        <div class="nav-links" style="z-index: 2;">
+          <ul>
+            <li><a href="../index.html">Homepagina</a></li>
+            <li><a href="vlucht-info.html">Over de vlucht</a></li>
+            <li><a href="ruimteschip.html">Ruimteschip</a></li>
+            <li><a href="rest-menu.html">Restaurant menu</a></li>
+            <li><a href="wellness.html">Wellnessruimte</a></li>
+            <li class="sub"><a href="fitnessruimte.html">- Fitnessruimte en lessen</a></li>
+            <li class="sub"><a href="bibliotheek.html">- Bibliotheek</a></li>
+            <li><a href="vrholodeck.html">Vr-Holodeck</a></li>
+            <li><a href="entertainment.html">Entertainment</a></li>
+            <li class="sub"><a href="minigames.html">- Mini games</a></li>
+            <li class="sub"><a href="filmsenseries.html">- Films & Series</a></li>
+            <li class="sub"><a href="books-music.html">- E-books & Muziek</a></li>
+          </ul>
+        </div>
+        <h1>Minigames</h1>
+    </div>
+  </div>
+      <script src="../script/script.js"></script>
 </body>
 </html>
