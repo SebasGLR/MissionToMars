@@ -1,5 +1,5 @@
 body {
-    background: #000000;
+    background-color: black;
 }
 
 h1 {
@@ -9,4 +9,30 @@ h1 {
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
     margin-top: 20px;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: aqua;
+ 
+}
+.dropdown-menu{
+    display: none;
+position: relative;
+background-color: white;
+
+
+
+}
+.dropdown-menu a{
+    padding: 8px 12px;
+    display: block;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+text-decoration: none;
+
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
 }
