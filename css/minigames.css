@@ -1,92 +1,65 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #000, #531236);
-    color: white;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: black;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: #222;
-    transition: left 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    border-bottom: 1px solid #444;
-}
-
-.menu a:hover {
-    background: #555;
-}
-
-h1 {
-    margin: 0;
-}
-
-.close-icon {
-    font-size: 30px;
-    color: white;
-    text-align: right;
-    padding: 10px 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.container {
+/* Algemene stijlen */
+.Minigames-Content {
+    height: 90%;
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 94vh;
-    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.games {
+/* Link stijl voor klikbare div */
+.Minigames-Content .video-link {
+    text-decoration: none; /* Verwijder onderlijning van links */
+    display: block;
+    border-radius: 15px;
+}
+
+/* Stijl voor de video-div */
+.Minigames-Content .video-div {
+    text-align: center;
+    color: white;
+    width: 520px;
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out; /* Zachte transitie */
+}
+
+/* Hover Effect */
+.Minigames-Content .video-div:hover {
+    transform: scale(1.05); /* Vergroot bij hover */
+    cursor: pointer; /* Toon een handcursor bij hover */
+}
+
+/* Stijl voor de tekst in video-div */
+.Minigames-Content .video-div h3 {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Stijl voor de video-desc */
+.Minigames-Content .video-desc {
+    background-color: rgb(0 0 0 / 50%);
+    width: 330px;
+    height: 462px;
+    border: 1px solid white;
+    border-radius: 260px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.game-btn {
-    background: black;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
     color: white;
-    border: none;
-    padding: 20px 40px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    height: 300px;
-    width: 600px;
 }
 
-.game-btn:hover {
-    background: #444;
-}
-
-.description h2 {
-    margin-bottom: 10px;
+.Minigames-Content .video-desc p {
+    text-align: center;
 }
