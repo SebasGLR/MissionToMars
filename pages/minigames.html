@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minigames</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/minigames.css">
 </head>
 <body>
-    <h1>Minigames</h1>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+            <div class="close-icon" onclick="toggleMenu()">✖</div>
+            <a href="#">Home</a>
+            <a href="#">Game 1</a>
+            <a href="#">Game 2</a>
+            <a href="#">Contact</a>
+        </div>
+        <h1 style="text-align: center;">Minigames</h1>
+    </nav>
+    <div class="container">
+        <div class="games">
+            <button class="game-btn">Game 1</button>
+            <button class="game-btn">Game 2</button>
+        </div>
+        <div class="description">
+            <h2>Text + Uitleg</h2>
+            <p>--- ------ ---- --- ---<br>-- -- - -   - - ------</p>
+        </div>
+    </div>
 
-    <a href="../index.html">
-        <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;">Homepage</button>
-    </a>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const menuIcon = document.getElementById('menuIcon');
+
+            if (menu.style.left === '0px') {
+                menu.style.left = '-250px';
+            } else {
+                menu.style.left = '0px';
+            }
+        }
+    </script>
+
 
 </body>
 </html>
