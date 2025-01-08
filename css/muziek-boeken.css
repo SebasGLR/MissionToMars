@@ -1,0 +1,68 @@
+/* Start books-music page */
+.books-music-container {
+    position: relative;
+  }
+  .books-music-overview {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    position: relative;
+    background: linear-gradient(#191717, #0D0D0D, #052159);
+  }
+  .books-music-overview .left-column, .books-music-overview .right-column  {
+    width: 39%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .books-music-overview .left-column h2, .books-music-overview .right-column h2 {
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .books-music-overview .vertical-divider {
+    background-color: black;
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .books-music-overview .item {
+    margin: 20px 0;
+  }
+  .books-music-overview .item a img {
+    width: 300px;
+    height: 200px;
+  }
+  .book-content {
+    background: linear-gradient(#191717, #0D0D0D, #590539);
+    padding-bottom: 50px;
+  }
+  .book-content h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .book-content .book-display {
+    margin: 0px auto;
+    width: 1100px;
+    height: 500px;
+    background-color: black;
+  }
+  .books-music-container .music-section {
+    background: linear-gradient(#191717, #0D0D0D, #590539);
+    padding-bottom: 50px;
+  }
+  .books-music-container .music-section h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  /* End books-music page */

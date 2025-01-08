@@ -1,0 +1,58 @@
+/* Start rest menu  page*/
+.rest-menu-container {
+    overflow: hidden;
+  }
+  .rest-menu-landing {
+    position: relative;
+    background-image: url('/images/rest-menu/bg-4.jpg');
+    background-size: cover;
+    height: 89vh;
+  }
+  .rest-menu-landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 0%, 0.5);
+  }
+  .rest-menu-landing h1 {
+    position: relative;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding-top: 30px;
+  }
+  .rest-menu-landing .rest-menu-content {
+    background-color: white;
+    width: 1000px;
+    margin: 35px auto 0px auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    gap: 20px 0;
+  }
+  .rest-menu-content .order {
+    width: 24%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 35px;
+  }
+  .rest-menu-content .order .order-info {
+    color: gray;
+    max-width: 150px;
+  }
+  .rest-menu-content .order .order-price {
+    font-weight: bold;
+    align-self: flex-start;
+  }
+  .rest-menu-content .order img {
+    width: 130px;
+    margin-left: 10px;
+  }
+  /* End rest menu  page*/
