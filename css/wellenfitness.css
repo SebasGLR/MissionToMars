@@ -1,0 +1,12 @@
+body{
+    background-image: linear-gradient( to top, rgb(43, 50, 189), rgb(0, 0, 0));
+    min-height: 100vh;
+display: flex;
+margin: auto;
+}
+.fitness{
+    text-align: center;
+    margin: auto;
+
+}
+
