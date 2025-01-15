@@ -448,8 +448,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   margin: 20px 0;
 }
 .books-music-overview .item a img {
-  width: 300px;
-  height: 200px;
+  height: 300px;
 }
 .book-content {
   background: linear-gradient(#191717, #0D0D0D, #590539);
