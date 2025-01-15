@@ -9,6 +9,9 @@ a, a:visited, a:focus {
 }
 
 body {
+  font-family: "Jersey 15", serif;
+  font-weight: 600;
+  font-style: normal;
   margin: 0;
   background-color: black;
 }
@@ -118,7 +121,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   margin-bottom: 20px;
   padding-top: 20px;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   flex-grow: 1;
   margin-right: 50px;
@@ -342,7 +345,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   background-color: rgb(0 0 0 / 30%);
   width: 330px;
   height: 462px;
-  border-radius: 260px;
+  border-radius: 26px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -448,8 +451,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   margin: 20px 0;
 }
 .books-music-overview .item a img {
-  width: 300px;
-  height: 200px;
+  height: 300px;
 }
 .book-content {
   background: linear-gradient(#191717, #0D0D0D, #590539);
@@ -478,4 +480,34 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   margin: 0;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+#star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 1000; 
+}
+
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0.5));
+  border-radius: 50%;
+  animation: fall 2s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50vw + 100%), 100vh) scale(0.8);
+    opacity: 0;
+  }
 }

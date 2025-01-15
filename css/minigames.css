@@ -15,6 +15,7 @@
     text-decoration: none; /* Verwijder onderlijning van links */
     display: block;
     border-radius: 15px;
+    
 }
 
 /* Stijl voor de video-div */
@@ -29,6 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2), 0 8px 20px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease-in-out; /* Zachte transitie */
 }
 
@@ -48,10 +50,11 @@
 /* Stijl voor de video-desc */
 .Minigames-Content .video-desc {
     background-color: rgb(0 0 0 / 50%);
-    width: 330px;
-    height: 462px;
+    width: 340px;
+    height: 472px;
     border: 1px solid white;
-    border-radius: 260px;
+    border-radius: 26px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2), 0 8px 20px rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,3 +66,5 @@
 .Minigames-Content .video-desc p {
     text-align: center;
 }
+
+

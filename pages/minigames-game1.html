@@ -1,48 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/minigames.css">
-    <title>Ruimteschip</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+  <title>Raket-Schiet Game</title>
+  <style>
+    body {
+      font-family: "Jersey 15", serif;
+      font-weight: 600;
+      font-style: normal;     
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#000000, #000968);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    canvas {
+      border: 2px solid rgb(0, 0, 0);
+      background-image: url('../images/rocketgame.jpg');
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+
+    .game-over, .reset-btn, .back-btn {
+      color: white;
+      margin-top: 20px;
+    }
+
+    .game-over {
+      display: none;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #000000;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #383838;
+    }
+
+    button:active {
+      background-color: #313131;
+    }
+
+    img {
+      width: 30px;
+      height: 50px;
+    }
+  </style>
 </head>
 <body>
-  <div class="ruimteschip-container">
-    <div class="header">
-      <div class="menu-icon">
-        <label for="check">
-          <input class="burger-menu-input" type="checkbox" id="check"/> 
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-        <div class="logo">
-            <!-- <img src="images/header/logo.png" alt="logo"> -->
-            Mission to Mars
-        </div>
-    </div>
-    <div class="ruimteschip-landing">
-        <div class="nav-links" style="z-index: 2;">
-          <ul>
-            <li><a href="../index.html">Homepagina</a></li>
-            <li><a href="vlucht-info.html">Over de vlucht</a></li>
-            <li><a href="ruimteschip.html">Ruimteschip</a></li>
-            <li><a href="rest-menu.html">Restaurant menu</a></li>
-            <li><a href="wellness.html">Wellnessruimte</a></li>
-            <li class="sub"><a href="fitnessruimte.html">- Fitnessruimte en lessen</a></li>
-            <li class="sub"><a href="bibliotheek.html">- Bibliotheek</a></li>
-            <li><a href="vrholodeck.html">Vr-Holodeck</a></li>
-            <li><a href="entertainment.html">Entertainment</a></li>
-            <li class="sub"><a href="minigames.html">- Mini games</a></li>
-            <li class="sub"><a href="filmsenseries.html">- Films & Series</a></li>
-            <li class="sub"><a href="books-music.html">- E-books & Muziek</a></li>
-          </ul>
-        </div>
-        <h1>Game 1</h1>
-    </div>
+  <div id="star-container"></div>
+
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+  <div class="game-over" id="gameOver">Game Over! Raket heeft de grond geraakt</div>
+  
+  <div class="button-container">
+    <button class="reset-btn" id="resetBtn">Reset Game</button>
+    <button class="back-btn" id="backBtn">Terug naar Minigames</button>
   </div>
-      <script src="../script/script.js"></script>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const resetBtn = document.getElementById('resetBtn');
+    const backBtn = document.getElementById('backBtn');
+    const gameOverText = document.getElementById('gameOver');
+
+    let raketten = [];
+    let rakettenGeschoten = 0;
+    let gameOver = false;
+
+    // Raketten constructor
+    class Raket {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.width = 30;
+        this.height = 50;
+        this.speed = Math.random() * 3 + 2; 
+        this.image = new Image();
+        this.image.src = '../images/minigamerocket.png';
+      }
+      
+      update() {
+        this.y += this.speed;
+      }
+      
+      draw() {
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+      }
+    }
+
+    function spawnRaket() {
+      if (gameOver) return;
+
+      const x = Math.random() * (canvas.width - 30);
+      const raket = new Raket(x, -50); 
+      raketten.push(raket);
+    }
+
+    canvas.addEventListener('click', (e) => {
+      if (gameOver) return;
+      const mouseX = e.clientX - canvas.offsetLeft;
+      const mouseY = e.clientY - canvas.offsetTop;
+
+      for (let i = raketten.length - 1; i >= 0; i--) {
+        const raket = raketten[i];
+        if (mouseX >= raket.x && mouseX <= raket.x + raket.width &&
+            mouseY >= raket.y && mouseY <= raket.y + raket.height) {
+          raketten.splice(i, 1);
+          rakettenGeschoten++; e
+          break;
+        }
+      }
+    });
+
+    function update() {
+      if (gameOver) return;
+
+      if (Math.random() < 0.02) {
+        spawnRaket();
+      }
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.font = '24px Arial';
+      ctx.fillStyle = 'white';
+      ctx.fillText('Raketten uitgeschoten: ' + rakettenGeschoten, 10, 30);
+
+
+      raketten.forEach((raket) => {
+        raket.update();
+        raket.draw();
+      });
+
+      for (let i = raketten.length - 1; i >= 0; i--) {
+        const raket = raketten[i];
+        if (raket.y > canvas.height) {
+          raketten.splice(i, 1);
+          gameOver = true;
+          gameOverText.style.display = 'block';
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    resetBtn.addEventListener('click', () => {
+      raketten = [];
+      rakettenGeschoten = 0;
+      gameOver = false;
+      gameOverText.style.display = 'none';
+      update();
+    });
+
+    backBtn.addEventListener('click', () => {
+      window.location.href = 'minigames.html';
+    });
+
+    update();
+  </script>
 </body>
 </html>
