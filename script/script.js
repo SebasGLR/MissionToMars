@@ -19,6 +19,7 @@ burgerInput.addEventListener("change", () => {
   }
 });
 
+let lastStarTime = 0;
 
 function createFallingStar() {
   const starContainer = document.getElementById("star-container");
@@ -35,4 +36,13 @@ function createFallingStar() {
   });
 }
 
-setInterval(createFallingStar, 500);
+function animate(time) {
+  if (time - lastStarTime > 300) {
+    createFallingStar();
+    lastStarTime = time;
+  }
+
+  requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
