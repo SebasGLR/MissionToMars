@@ -1,3 +1,9 @@
+a {
+  color: unset !important;
+}
+a:visited {
+  color: unset !important;
+}
 /* Start books-music page */
 .books-music-container {
     position: relative;
@@ -281,11 +287,11 @@ div.fig {
   }
 a:link {
   color: blue;
-  text-decoration: none
+  text-decoration: unset;
   }
 a:visited {
   color: blue;
-  text-decoration: none
+  text-decoration: unset
   }
 a:hover {
   color: red
