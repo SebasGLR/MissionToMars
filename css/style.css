@@ -206,14 +206,16 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   top: 40%;
   z-index: 1;
   font-size: 30px;
-  max-width: 550px;
+  max-width: 650px;
   color: white;
+  text-align: center;
 }
 .landing p {
   top: 52%;
   font-size: 18px;
   max-width: 700px;
   color: gray;
+  text-align: center;
 }
 
 .landing .hidden {
@@ -249,6 +251,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   position: relative;
   background-size: cover;
   text-align: center;
+  height: 100%;
 }
 .vlucht-info-body::before {
   content: '';
