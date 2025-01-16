@@ -1,19 +1,16 @@
 .logo1 {
 
     float: right;
+    width: 100px;
     height: 100px;
-    width: 300px;
-    margin: 300px;
+    margin: auto;
     display: flex;
-    position: relative;
+    position: absolute;
     left: -200px
 }
 
 .logo2 {
     float: left;
-    height: 300px;
-    width: 300px;
-    margin: 300px;
     display: flex;
     position: relative;
     right: -200px;

@@ -1,0 +1,13 @@
+body{
+background-color: red;
+position: relative;
+}
+
+
+.foto1{
+    height: 300px;
+    width: 300px;
+}
+#tekst1{
+ display: inline-block;
+}
