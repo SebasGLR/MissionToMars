@@ -7,6 +7,7 @@
     display: flex;
     position: absolute;
     left: -200px
+    
 }
 
 .logo2 {
@@ -15,15 +16,23 @@
     position: relative;
     right: -200px;
 
-
-
 }
 
 
 .logo1:hover{
     transform: scale(1.30);
+    cursor: pointer;
+
 }
 .logo2:hover{
 
         transform: scale(1.30);
+        cursor: pointer;
+        width: 50%;
+}
+.tekst2 {
+display: flex;
+width: 50%;
+position: relative;
+float: left;
 }
