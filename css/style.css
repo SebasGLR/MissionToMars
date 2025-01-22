@@ -563,6 +563,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
 .left-images img, .right-images img {
   width: 350px;
-  height: auto;
+  height: 200px;
   margin-bottom: 15px;
 }
