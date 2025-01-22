@@ -46,6 +46,9 @@
   .rest-menu-content .order .order-info {
     color: gray;
     max-width: 150px;
+    font-size: 14px;
+    font-weight: normal;
+    /* line-height: 18px; */
   }
   .rest-menu-content .order .order-price {
     font-weight: bold;
@@ -53,6 +56,8 @@
   }
   .rest-menu-content .order img {
     width: 130px;
+    height: 115px;
     margin-left: 10px;
+    border-radius: 5px;
   }
   /* End rest menu  page*/
