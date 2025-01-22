@@ -307,12 +307,14 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   position: relative;
   background-size: cover;
 }
+
 .ruimteschip-landing::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: hsl(0, 0%, 0%, 0.8);
+  z-index: 1; /* Zorg ervoor dat dit onder de content staat */
 }
 .ruimteschip-container h1 {
   z-index: 1;
@@ -510,4 +512,50 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
     transform: translate(calc(-50vw + 100%), 100vh) scale(0.8);
     opacity: 0;
   }
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  z-index: 1; /* Zorg ervoor dat dit boven de overlay komt */
+  position: relative; /* Belangrijk om de z-index te laten werken */
+}
+
+.left-images {
+  display: flex;
+  margin-left: 300px;
+  flex-direction: column;
+  gap: 10px
+}
+
+.right-images {
+  display: flex;
+  margin-right: 300px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clickable-image {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.left-images a, .right-images a {
+  display: block;
+}
+
+.left-images img, .right-images img {
+  width: 350px;
+  height: auto;
+  margin-bottom: 15px;
 }
