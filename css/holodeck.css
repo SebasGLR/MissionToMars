@@ -9,5 +9,11 @@ position: relative;
     width: 300px;
 }
 #tekst1{
- display: inline-block;
+    margin: auto;
+    width: 50%;
+    border: 6px solid;
+    padding: 4px;
+ color: white;
+ 
+
 }
