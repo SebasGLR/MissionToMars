@@ -282,6 +282,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   margin-right: 20px;
   margin-left: 20px;
   width: 550px;
+  font-weight: normal;
 }
 .info-section h4 {
   text-align: center;
@@ -355,8 +356,14 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   padding: 40px;
   color: white;
 }
+.ruimteschip-landing .ruimteschip-content .video-desc h3 {
+  margin-top: 10px;
+}
 .ruimteschip-landing .ruimteschip-content .video-desc p {
   text-align: center;
+  font-weight: normal;
+  margin-top: 0;
+  line-height: 18px;
 }
 /* End ruimteschip  page*/
 /* Start rest menu  page*/
