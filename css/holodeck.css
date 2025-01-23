@@ -9,6 +9,7 @@ position: relative;
     width: 300px;
 }
 #tekst1{
+    position: relative;
     margin: auto;
     width: 50%;
     border: 6px solid;
